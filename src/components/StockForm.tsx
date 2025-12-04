@@ -63,7 +63,9 @@ const StockForm = () => {
                             <td className="product-name">{product.name}</td>
                             <td>
                                 <input
-                                    type="text"
+                                    type="number"
+                                    min="0"
+                                    step="1"
                                     value={product.unidades}
                                     onChange={(e) => updateProduct(category, index, 'unidades', e.target.value)}
                                     placeholder="0"
@@ -71,7 +73,9 @@ const StockForm = () => {
                             </td>
                             <td>
                                 <input
-                                    type="text"
+                                    type="number"
+                                    min="0"
+                                    step="1"
                                     value={product.pack}
                                     onChange={(e) => updateProduct(category, index, 'pack', e.target.value)}
                                     placeholder="0"
@@ -110,7 +114,9 @@ const StockForm = () => {
                             <td className="product-name">{product.name}</td>
                             <td>
                                 <input
-                                    type="text"
+                                    type="number"
+                                    min="0"
+                                    step="1"
                                     value={product.unidadesLlenos}
                                     onChange={(e) => updateProduct('barra', index, 'unidadesLlenos', e.target.value)}
                                     placeholder="0"
@@ -118,7 +124,9 @@ const StockForm = () => {
                             </td>
                             <td>
                                 <input
-                                    type="text"
+                                    type="number"
+                                    min="0"
+                                    step="1"
                                     value={product.unidadesAbierto}
                                     onChange={(e) => updateProduct('barra', index, 'unidadesAbierto', e.target.value)}
                                     placeholder="0"
@@ -207,7 +215,9 @@ const StockForm = () => {
                                 <td className="product-name">{product.name}</td>
                                 <td>
                                     <input
-                                        type="text"
+                                        type="number"
+                                        min="0"
+                                        step="1"
                                         value={product.unidades}
                                         onChange={(e) => updateProduct('vinosPrimeraLinea', index, 'unidades', e.target.value)}
                                         placeholder="0"
@@ -215,7 +225,9 @@ const StockForm = () => {
                                 </td>
                                 <td>
                                     <input
-                                        type="text"
+                                        type="number"
+                                        min="0"
+                                        step="1"
                                         value={product.pack}
                                         onChange={(e) => updateProduct('vinosPrimeraLinea', index, 'pack', e.target.value)}
                                         placeholder="0"
@@ -236,7 +248,9 @@ const StockForm = () => {
                                 <td className="product-name">{product.name}</td>
                                 <td>
                                     <input
-                                        type="text"
+                                        type="number"
+                                        min="0"
+                                        step="1"
                                         value={product.unidades}
                                         onChange={(e) => updateProduct('vinosSegundaLinea', index, 'unidades', e.target.value)}
                                         placeholder="0"
@@ -244,7 +258,9 @@ const StockForm = () => {
                                 </td>
                                 <td>
                                     <input
-                                        type="text"
+                                        type="number"
+                                        min="0"
+                                        step="1"
                                         value={product.pack}
                                         onChange={(e) => updateProduct('vinosSegundaLinea', index, 'pack', e.target.value)}
                                         placeholder="0"
@@ -265,9 +281,7 @@ const StockForm = () => {
             </div>
 
             {renderProductTable('GASEOSAS PRIMERA LÍNEA', 'gaseosasPrimeraLinea', formData.gaseosasPrimeraLinea)}
-
             {renderProductTable('GASEOSAS SEGUNDA LÍNEA', 'gaseosasSegundaLinea', formData.gaseosasSegundaLinea)}
-
             {renderBarraTable()}
 
             <div className="form-footer">
